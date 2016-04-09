@@ -1,0 +1,16 @@
+{
+  "intents": [
+    {
+      "intent": "NameGameIntent",
+      "slots": [
+        {
+          "name": "FirstName",
+          "type": "AMAZON.US_FIRST_NAME"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}

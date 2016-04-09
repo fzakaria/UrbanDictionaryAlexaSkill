@@ -1,0 +1,4 @@
+NameGameIntent rhyme {FirstName}
+NameGameIntent {FirstName}
+NameGameIntent play for {FirstName}
+NameGameIntent name game for {FirstName}
