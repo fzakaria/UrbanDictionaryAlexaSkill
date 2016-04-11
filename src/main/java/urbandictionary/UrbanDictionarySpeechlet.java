@@ -121,7 +121,7 @@ public class UrbanDictionarySpeechlet implements Speechlet {
             Definition definition = sortedDefinitions.get(index);
             // Create the Simple card content.
             SimpleCard card = new SimpleCard();
-            card.setTitle("Urban Dictionary");
+            card.setTitle(word);
             card.setContent(definition.getDefinition());
             // Create the plain text output.
             PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
