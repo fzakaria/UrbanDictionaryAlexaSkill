@@ -1,4 +1,34 @@
-NameGameIntent rhyme {FirstName}
-NameGameIntent {FirstName}
-NameGameIntent play for {FirstName}
-NameGameIntent name game for {FirstName}
+DefineIntent define {bootylicious|Term}
+DefineIntent define {SJW|Term}
+DefineIntent define {Donal Trump|Term}
+DefineIntent define {Netflix and Chill|Term}
+
+DefineIntent what does {bootylicious|Term} mean
+DefineIntent what does {SJW|Term} mean
+DefineIntent what does {Donal Trump|Term} mean
+DefineIntent what does {Netflix and Chill|Term} mean
+
+DefineIntent what is the definition of {bootylicious|Term}
+DefineIntent what is the definition of {SJW|Term}
+DefineIntent what is the definition of {Donal Trump|Term}
+DefineIntent what is the definition of {Netflix and Chill|Term}
+
+DefineIntent explain {bootylicious|Term}
+DefineIntent explain {SJW|Term}
+DefineIntent explain {Donal Trump|Term}
+DefineIntent explain {Netflix and Chill|Term}
+
+
+ContinueIntent continue
+ContinueIntent next
+ContinueIntent go on
+
+AMAZON.StopIntent no
+AMAZON.StopIntent enough
+AMAZON.StopIntent thanks
+AMAZON.StopIntent that's enough
+
+AMAZON.CancelIntent no
+AMAZON.CancelIntent enough
+AMAZON.CancelIntent thanks
+AMAZON.CancelIntent that's enough

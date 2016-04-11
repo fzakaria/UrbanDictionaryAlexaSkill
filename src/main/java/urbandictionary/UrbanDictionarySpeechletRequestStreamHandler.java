@@ -1,4 +1,4 @@
-package namegame;
+package urbandictionary;
 
 
 import java.util.Collections;
@@ -10,9 +10,9 @@ import com.amazon.speech.speechlet.lambda.SpeechletRequestStreamHandler;
 /**
  * This class could be the handler for an AWS Lambda function powering an Alexa Skills Kit
  * experience. To do this, simply set the handler field in the AWS Lambda console to
- * "namegame.NameGameSpeechletRequestStreamHandler".
+ * "namegame.UrbanDictionarySpeechletRequestStreamHandler".
  */
-public final class NameGameSpeechletRequestStreamHandler extends SpeechletRequestStreamHandler {
+public final class UrbanDictionarySpeechletRequestStreamHandler extends SpeechletRequestStreamHandler {
     private static final Set<String> supportedApplicationIds = new HashSet<String>();
 
     static {
@@ -20,11 +20,10 @@ public final class NameGameSpeechletRequestStreamHandler extends SpeechletReques
          * This Id can be found on https://developer.amazon.com/edw/home.html#/ "Edit" the relevant
          * Alexa Skill and put the relevant Application Ids in this Set.
          */
-        supportedApplicationIds.add("amzn1.echo-sdk-ams.app.[unique-value-here]");
+        supportedApplicationIds.add("amzn1.echo-sdk-ams.app.e9e69e2e-a5e8-4aac-9872-f675298e44df");
     }
 
-    public NameGameSpeechletRequestStreamHandler() {
-        super(new NameGameSpeechlet(), Collections.emptySet());
-        //super(new NameGameSpeechlet(), supportedApplicationIds);
+    public UrbanDictionarySpeechletRequestStreamHandler() {
+        super(new UrbanDictionarySpeechlet(), supportedApplicationIds);
     }
 }

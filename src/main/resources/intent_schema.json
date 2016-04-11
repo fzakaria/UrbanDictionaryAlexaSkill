@@ -1,16 +1,25 @@
 {
   "intents": [
     {
-      "intent": "NameGameIntent",
+      "intent": "DefineIntent",
       "slots": [
         {
-          "name": "FirstName",
-          "type": "AMAZON.US_FIRST_NAME"
+          "name": "Term",
+          "type": "AMAZON.LITERAL"
         }
       ]
     },
     {
+      "intent": "ContinueIntent"
+    },
+    {
       "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
     }
   ]
 }

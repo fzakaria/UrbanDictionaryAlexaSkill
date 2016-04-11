@@ -5,10 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.fzakaria</groupId>
-    <artifactId>NameGame</artifactId>
+    <artifactId>UrbanDictionarySkill</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <feign.version>8.16.0</feign.version>
         <lambda.version>1.1.0</lambda.version>
         <slf4j.version>1.7.12</slf4j.version>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -28,10 +29,42 @@
     </dependencyManagement>
 
     <dependencies>
+
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.4</version>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-core</artifactId>
+            <version>${feign.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-jackson</artifactId>
+            <version>${feign.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-slf4j</artifactId>
+            <version>${feign.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.8</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- ALEXA DEPENDENCIES: Does not publish a POM! -->
+        <dependency>
+            <groupId>com.amazon.alexa</groupId>
+            <artifactId>alexa-skills-kit</artifactId>
+            <version>1.1</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -44,12 +77,10 @@
             <version>2.4</version>
         </dependency>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>19.0</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.0</version>
         </dependency>
-
-
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-lambda-java-core</artifactId>
@@ -64,7 +95,9 @@
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-lambda-java-log4j</artifactId>
             <version>1.0.0</version>
+            <scope>runtime</scope>
         </dependency>
+        <!-- ALEXA DEPENDENCIES -->
 
         <!-- LOGGING START CONFIGURATION -->
         <dependency>
@@ -76,14 +109,25 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j.version}</version>
+            <scope>runtime</scope> <!-- Runtime only for the samples -->
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
-            <scope>runtime</scope>
+            <scope>runtime</scope> <!-- Runtime only for the samples -->
         </dependency>
         <!-- END LOGGING CONFIGURATION -->
+
+        <!-- TEST CONFIGURATION -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- END TEST CONFIGURATION -->
+
 
     </dependencies>
 
